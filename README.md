@@ -1,1 +1,0 @@
-# WEARESTIMULAR.github.io
