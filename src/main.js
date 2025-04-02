@@ -1,5 +1,7 @@
 import * as THREE from 'three';
+
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+
 
 const scene = new THREE.Scene();
 //scene.fog = new THREE.Fog(0x000000, 6, 6); // Add standard fog
