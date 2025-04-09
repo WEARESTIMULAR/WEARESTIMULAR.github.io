@@ -1,0 +1,150 @@
+/*HEADER*/
+.header{
+    background-color: black;
+    width: 100%;
+    height: 55px;
+    position: fixed;
+    height: 100px;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+}
+
+.banner-section{
+    background-color: black;
+    color: white;
+    font-family: Roboto;
+    font-weight: bold;
+    text-align: center;
+    line-height: normal;
+    vertical-align:sub;
+    flex: 1;
+    align-items: center;
+    min-width: 200px;
+    animation: RightToLeftPanner 25s infinite linear;
+    overflow:visible;
+    white-space: nowrap;
+    height: 20px;
+}
+
+.bannerContainer{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content:  space-between;
+    padding: 0 20px;
+    border-bottom: 2px solid black;
+}
+
+.buttonContainer{
+    background-color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex: 1;
+}
+
+.logoHolder{
+    background-image: url(../assets/stimular_logo.svg);
+    width: 200px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    flex: 0 0 auto;
+
+}
+
+.button{
+    display: inline-block;
+    background-color: #e91e63;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: aqua;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    margin: 20px;
+    width: 30px;
+    height: 25px;
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.hamburger .line {
+    background-color: #333;
+    height: 5px;
+    margin: 5px 0;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.menu {
+    background-color: #333;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 25px;
+    left: -100%; /* Hidden by default */
+    transition: left 0.3s ease-in-out;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 50px 20px;
+}
+
+.menu ul li {
+    margin: 20px 0;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    display: block;
+    padding: 10px;
+}
+
+@keyframes RightToLeftPanner{
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(-200%);
+    }
+}
+
+/* Media query for mobile screens */
+@media screen and (max-width: 768px) {
+    /* Display the hamburger icon on mobile */
+    .hamburger {
+      display: block;
+    }
+    .button{
+        display: none;
+    }
+  
+    /* Hide the menu by default */
+    .menu {
+      left: -100%;
+    }
+  
+    /* When the menu is active, slide it in */
+    .menu.active {
+      left: 0;
+    }
+}
