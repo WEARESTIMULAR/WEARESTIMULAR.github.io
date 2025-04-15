@@ -9,14 +9,51 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
+
+.newsContainer{
+    display: flex;
+    width: 100%;
+    height: 300px;
+    background-color: white;
+    flex-direction: column;
+}
+
+.subTitle{
+    background-color: black;
+    width: 100%;
+    height: 20px;
+    color: white;
+}
+
+.horizontalScroll{
+    display: flex;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Optional: snapping behavior */
+    gap: 20px; /* Space between items */
+    padding: 20px;
+}
+
+.scrollItem {
+    min-width: 300px; /* Width of each item */
+    height: 200px;
+    background-color: gray;
+    flex-shrink: 0; /* Prevent items from shrinking */
+    scroll-snap-align: start; /* Snap to start */
+    border-radius: 3px;
+  }
 
 .stickyContainer{
     width: 100%;
-    height: 200px;
-    background-color: aqua;
+    height: 400px;
+    background-color: black;
+    color: white;
     position: sticky;
-    display: flex;
+    bottom: 0;
+    z-index: -1;
+    text-wrap: wrap;
+    padding: 10px;
 }
 
 

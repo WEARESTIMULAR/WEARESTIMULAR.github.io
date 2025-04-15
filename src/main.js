@@ -3,14 +3,26 @@ document.addEventListener("DOMContentLoaded", function () {
   console.log("Page is ready!");
 
   // Get a button and add a click event
-  const myButton = document.getElementById('aboutButton');
+  const logoButton = document.getElementById('logoHolder');
+  const eventsButton = document.getElementById('eventButton');
 
-  if (myButton) {
-    myButton.addEventListener("click", function () {
+  console.log("getters fired");
+
+  if (logoButton){
+    console.log("logoButton found");
+    logoButton.addEventListener("click", function () {
       console.log("KLIK");
-      goToPage("../about.html");
+      goToPage("../index.html");
     });
   }
+  if (eventsButton){
+    console.log("eventsButton found");
+    eventsButton.addEventListener("click", function () {
+      console.log("KLIK");
+      goToPage("../events.html");
+    });
+  }
+
 });
 
 

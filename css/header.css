@@ -38,6 +38,7 @@
     justify-content:  space-between;
     padding: 0 20px;
     border-bottom: 2px solid black;
+    height: 70px;
 }
 
 .buttonContainer{
@@ -58,6 +59,7 @@
     background-position: center;
     background-size: cover;
     flex: 0 0 auto;
+    cursor: pointer;
 
 }
 
